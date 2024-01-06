@@ -1,0 +1,55 @@
+[System]
+Name='CreditworthinessEvaluation'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Income'
+Range=[0, 1000000]
+NumMFs=3
+MF1='Low':'trimf',[0, 100000, 200000]
+MF2='Medium':'trimf',[100000, 400000, 700000]
+MF3='High':'trimf',[600000, 1000000, 1000000]
+
+[Input2]
+Name='CreditHistory'
+Range=[0, 10]
+NumMFs=3
+MF1='Poor':'trimf',[0, 0, 5]
+MF2='Medium':'trimf',[0, 5, 10]
+MF3='Good':'trimf',[5, 10, 10]
+
+[Input3]
+Name='ExistingDebts'
+Range=[0, 5]
+NumMFs=3
+MF1='None':'trimf',[0, 0, 2.5]
+MF2='Few':'trimf',[0, 2.5, 5]
+MF3='Many':'trimf',[2.5, 5, 5]
+
+[Output1]
+Name='Creditworthiness'
+Range=[0, 100]
+NumMFs=3
+MF1='Low':'trimf',[0, 0, 50]
+MF2='Medium':'trimf',[0, 50, 100]
+MF3='High':'trimf',[50, 100, 100]
+
+[Rules]
+1, 1, 1, 2, 1
+2, 2, 2, 2, 1
+3, 3, 3, 2, 1
+1, 1, 3, 3, 1
+2, 2, 3, 3, 1
+3, 3, 1, 3, 1
+1, 2, 2, 2, 1
+2, 1, 2, 2, 1
+3, 2, 1, 3, 1
