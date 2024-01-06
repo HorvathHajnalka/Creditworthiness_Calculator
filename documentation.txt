@@ -1,4 +1,4 @@
-My program is an example of a simple fuzzy logic system that can be applied for creditworthiness evaluation. Within the .fis file, there is a fuzzy system with three inputs (income, credit history, existing debts) and one output (creditworthiness), categorizing creditworthiness into three groups: low, medium, and high.
+My program is an example of a simple fuzzy logic system that can be applied for creditworthiness evaluation. Within the Creditworthiness_Calculator.txt file, there is a fuzzy system with three inputs (income, credit history, existing debts) and one output (creditworthiness), categorizing creditworthiness into three groups: low, medium, and high.
 
 Input variables:
 Income: This input variable represents the client's income level and belongs to three fuzzy sets: "Low," "Medium," and "High." The low fuzzy set is defined for values between [0, 100000, 200000], the medium fuzzy set for values between [100000, 400000, 700000], and the high fuzzy set for values between [600000, 1000000, 1000000].
