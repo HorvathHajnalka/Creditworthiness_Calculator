@@ -1,39 +1,19 @@
-A programom egy példa egy egyszerű fuzzy logika rendszerhez, amely hitelképesség értékelésére alkalmazható. 
-A .fis fájlban egy három bemenetű (jövedelem, hitel története, meglévő tartozások) 
-és egy kimenetű (hitelképesség) fuzzy rendszer található, amely három csoportba sorolja a hitelképességet: 
-alacsony, közepes és magas.
+My program is an example of a simple fuzzy logic system that can be applied for creditworthiness evaluation. Within the .fis file, there is a fuzzy system with three inputs (income, credit history, existing debts) and one output (creditworthiness), categorizing creditworthiness into three groups: low, medium, and high.
 
-Bemeneti változók:
-Jövedelem: Ez az input változó az ügyfél jövedelmi szintjét reprezentálja, és három fuzzy halmazba tartozik: 
-"Alacsony", "Közepes" és "Magas". Az alacsony fuzzy halmaza [0, 100000, 200000] közötti értékeken értelmezett, 
-a közepes fuzzy halmaza [100000, 400000, 700000] közötti értékeken értelmezett, míg a magas fuzzy halmaza [600000, 1000000, 1000000]  
-közötti értékeken értelmezett.
+Input variables:
+Income: This input variable represents the client's income level and belongs to three fuzzy sets: "Low," "Medium," and "High." The low fuzzy set is defined for values between [0, 100000, 200000], the medium fuzzy set for values between [100000, 400000, 700000], and the high fuzzy set for values between [600000, 1000000, 1000000].
 
-Hitel története: Ez az input változó az ügyfél hitel történetét reprezentálja, és három fuzzy halmazba tartozik: 
-"Rossz", "Közepes" és "Jó". A rossz fuzzy halmaza [0, 0, 5] közötti értékeken értelmezett, a közepes fuzzy halmaza 
-[0, 5, 10] közötti értékeken értelmezett, míg a jó fuzzy halmaza [5, 10, 10] közötti értékeken értelmezett.
+Credit History: This input variable represents the client's credit history and belongs to three fuzzy sets: "Poor," "Medium," and "Good." The poor fuzzy set is defined for values between [0, 0, 5], the medium fuzzy set for values between [0, 5, 10], and the good fuzzy set for values between [5, 10, 10].
 
-Meglévő tartozások: Ez az input változó az ügyfél meglévő tartozásainak számát reprezentálja, és három fuzzy halmazba 
-tartozik: "Nincs", "Kevés" és "Sok". A nincs fuzzy halmaza [0, 0, 2.5] közötti értékeken értelmezett, a kevés fuzzy 
-halmaza [0, 2.5, 5] közötti értékeken értelmezett, míg a sok fuzzy halmaza [2.5, 5, 5] közötti értékeken értelmezett.
+Existing Debts: This input variable represents the number of existing debts of the client and belongs to three fuzzy sets: "None," "Few," and "Many." The none fuzzy set is defined for values between [0, 0, 2.5], the few fuzzy set for values between [0, 2.5, 5], and the many fuzzy set for values between [2.5, 5, 5].
 
-Kimeni változó:
-Hitelképesség: Ez az output változó az ügyfél hitelképességét reprezentálja, és három fuzzy halmazba tartozik: 
-"Alacsony", "Közepes" és "Magas". Az alacsony fuzzy halmaza [0, 0, 50] közötti értékeken értelmezett, 
-a közepes fuzzy halmaza [0, 50, 100] közötti értékeken értelmezett, míg a magas fuzzy halmaza [50, 100, 100] 
-közötti értékeken értelmezett.
+Output variable:
+Creditworthiness: This output variable represents the client's creditworthiness and belongs to three fuzzy sets: "Low," "Medium," and "High." The low fuzzy set is defined for values between [0, 0, 50], the medium fuzzy set for values between [0, 50, 100], and the high fuzzy set for values between [50, 100, 100].
 
-Szabályok:
-A rendszerben 9 szabály található, amelyek meghatározzák a bemeneti változók és az output változó közötti kapcsolatot. 
-Ezen szabályok alapján a rendszer képes értékelni az ügyfél hitelképességét a bemeneti változók értékei alapján, 
-és az output változóban egy fuzzy értéket ad meg, ami azt jelzi, hogy az ügyfél hitelképessége mennyire alacsony, 
-közepes vagy magas.
+Rules:
+There are nine rules in the system that determine the relationship between the input variables and the output variable. Based on these rules, the system can evaluate the client's creditworthiness based on the input variable values and provide a fuzzy value in the output variable, indicating how low, medium, or high the client's creditworthiness is.
 
-Példa:
-Ha a bemeneti értékeket 500000, 5 és 50-nek adjuk meg, akkor a program a hitelképességet "Közepes" szinten értékeli.
+Example:
+If we input values of 500000, 5, and 50 for income, credit history, and existing debts respectively, the program evaluates the creditworthiness at a "Medium" level.
 
-Ez csak egy egyszerű példa egy hitelképesség értékelő fuzzy logika rendszerre, 
-természetesen a valóságban egy ilyen rendszer sokkal összetettebb lehet, és több bemeneti változóval és szabállyal 
-rendelkezhet a pontosabb eredmények eléréséhez. Például: életkor, foglalkozás, hitelösszeg, 
-munkahelyi stabilitás(munkahelyváltás gyakorisága, munkahelyen töltött idő), 
-hitel előzmények(Az ügyfél korábbi hitelhez kapcsolódó viselkedése).
+This is just a simple example of a creditworthiness evaluation fuzzy logic system. In reality, such a system could be much more complex and have more input variables and rules to achieve more accurate results. For instance: age, occupation, loan amount, job stability (frequency of job changes, tenure at current job), credit history (client's previous behavior with loans).
