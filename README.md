@@ -1,0 +1,1 @@
+ A fuzzy logic system developed in Matlab, from input variables (income, credit history, existing debts) makes an output variable (creditworthiness) and uses fuzzy logic to categorize creditworthiness into three groups: low, medium, and high, based on predefined membership functions and rules.
