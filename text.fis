@@ -1,0 +1,47 @@
+[FIS]
+Name=Turazas
+Type=mamdani
+Version=2.0
+
+[Input1]
+Name=tura_hossza
+Range=[0 25]
+NumMFs=3
+MF1=rovid:trimf [0 0 5]
+MF2=kozepes:trimf [5 10 15]
+MF3=hosszu:trimf [15 25 25]
+
+[Input2]
+Name=nehezsegi_fok
+Range=[1 3]
+NumMFs=3
+MF1=konnyu:trimf [1 1 2]
+MF2=kozepes:trimf [1 2 3]
+MF3=nehez:trimf [2 3 3]
+
+[Input3]
+Name=szintkulonbseg
+Range=[0 1000]
+NumMFs=3
+MF1=kicsi:trimf [0 0 300]
+MF2=kozepes:trimf [300 450 600]
+MF3=nagy:trimf [600 1000 1000]
+
+[Output1]
+Name=javasolt_tura
+Range=[1 6]
+NumMFs=6
+MF1=Magas-Bakony_északi_resszeinek_esszencia:trimf [1 1 2]
+MF2=Bakonybel_Csehbanya:trimf [2 2 3]
+MF3=Csesznek_Koarok:trimf [1 2 2]
+MF4=Hodos-er_Likas-ko:trimf [1 1 1]
+MF5=Romai-furdo:trimf [1 1 1]
+MF6=Varvolgyi_tanosveny:trimf [2 2 3]
+
+[Rules]
+1, 1, 1, 1, (1), Ꜫ
+2, 3, 1, 2, (2), Ꜫ
+2, 2, 2, 3, (3), Ꜫ
+1, 1, 1, 3, (4), Ꜫ
+1, 1, 2, 4, (5), Ꜫ
+2, 2, 3, 6, (6), Ꜫ
